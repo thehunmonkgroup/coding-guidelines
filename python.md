@@ -1,3 +1,7 @@
+# PYTHON CODING RULES
+
+For any code written in Python, you MUST obey the following rules when writing new code, or editing/refactoring existing code:
+
 1. Always encapsulate the core functionality of the script into a class.
 
 2. Use type hints consistently throughout the code -- if any type hints in existing code are wrong or missing, fix them.
@@ -22,9 +26,9 @@
 
 9. Separate concerns by breaking down functionality into distinct methods or functions. If any existing methods or functions do not follow best practices in this regard, fix them by breaking them down into distinct methods or functions.
 
-10. Use f-strings for string formatting. If any existing strings do not use f-strings and can be easily fixed, fixed them.
+10. Use f-strings for string formatting. If any existing strings do not use f-strings and can be easily fixed, fix them.
 
-11. Define constants and default values clearly, preferably at the module or class level. If you find existing hard-coded values that would be more appropriate as a constant, fix them.
+11. Define constants and default values clearly, either at the module or class level, or in a separate `constants` module. If you find existing hard-coded values that would be more appropriate as a constant, fix them.
 
 12. Include a main guard (if __name__ == "__main__":) to control script execution.
 
@@ -34,4 +38,4 @@
 
 15. Adhere to PEP 8 guidelines for code style and formatting.
 
-16. Document all functions, methods, and classes using reStructuredText format compatible with Sphinx, including descriptions, parameters, return values, and any relevant examples or notes.
+16. Document code using Epytext format: clear, concise module-level docstrings for script purpose, class docstrings for class overview, and method/function docstrings with ":param:", ":return:", ":raises:" style descriptions. Use multi-line format for complex elements.
