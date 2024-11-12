@@ -38,4 +38,4 @@ For any code written in Python, you MUST obey the following rules when writing n
 
 15. Adhere to PEP 8 guidelines for code style and formatting.
 
-16. Document code using Epytext format: clear, concise module-level docstrings for script purpose, class docstrings for class overview, and method/function docstrings with ":param:", ":return:", ":raises:" style descriptions. Use multi-line format for complex elements.
+16. Document code using reStructuredText format: clear, concise module-level docstrings for script purpose, class docstrings for class overview, and method/function docstrings with ":param:", ":type:", ":return:", ":rtype:", ":raises:" style descriptions. Use multi-line format for complex elements.
