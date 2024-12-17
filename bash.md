@@ -17,3 +17,5 @@ For any code written in Bash, you MUST obey the following rules when writing new
 6. Define constants and default values clearly, at the top of the script. If you find existing hard-coded values that would be more appropriate as a constant, fix them.
 
 7. Use appropriate exit codes to indicate script success or failure.
+
+8. When adding new code, do NOT include comments! New code should be self-documenting. When editing existing code, you may preserve existing comments and/or edit them for correctness.
