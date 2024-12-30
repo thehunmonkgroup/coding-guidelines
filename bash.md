@@ -18,4 +18,6 @@ For any code written in Bash, you MUST obey the following rules when writing new
 
 7. Use appropriate exit codes to indicate script success or failure.
 
-8. When adding new code, do NOT include comments! New code should be self-documenting. When editing existing code, you may preserve existing comments and/or edit them for correctness.
+8. IMPORTANT: Code should be clean and self-documenting. Avoid ALL comments, the user will add them if needed. Within functions, avoid using blank lines -- the user will add them if needed.
+
+9. IMPORTANT: Code should be written so it is EASILY TESTABLE, which means closely following RULE 5 above, and making architectural decisions that will result in EASILY TESTABLE code.
