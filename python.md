@@ -43,3 +43,5 @@ For any code written in Python, you MUST obey the following rules when writing n
 17. IMPORTANT: Code should be clean and self-documenting. Avoid ALL comments, the user will add them if needed. Within functions/methods, avoid using blank lines -- the user will add them if needed.
 
 18. IMPORTANT: Code should be written so it is EASILY TESTABLE, which means closely following RULE 9 above, and making architectural decisions that will result in EASILY TESTABLE code.
+
+19. When writing tests, use the `pytest` testing library.

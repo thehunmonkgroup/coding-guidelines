@@ -21,3 +21,5 @@ For any code written in Bash, you MUST obey the following rules when writing new
 8. IMPORTANT: Code should be clean and self-documenting. Avoid ALL comments, the user will add them if needed. Within functions, avoid using blank lines -- the user will add them if needed.
 
 9. IMPORTANT: Code should be written so it is EASILY TESTABLE, which means closely following RULE 5 above, and making architectural decisions that will result in EASILY TESTABLE code.
+
+10. When writing tests, use the `https://github.com/progrium/basht` testing library.
