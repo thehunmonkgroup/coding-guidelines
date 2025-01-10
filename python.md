@@ -40,7 +40,7 @@ For any code written in Python, you MUST obey the following rules when writing n
 
 16. Document code using reStructuredText format: clear, concise module-level docstrings for script purpose, class docstrings for class overview, and method/function docstrings with ":param:", ":type:", ":return:", ":rtype:", ":raises:" style descriptions. Use multi-line format for complex elements.
 
-17. IMPORTANT: Code should be clean and self-documenting. Avoid ALL comments, the user will add them if needed. Within functions/methods, avoid using blank lines -- the user will add them if needed.
+17. IMPORTANT: Code should be clean and self-documenting. With the exception of docstrings as specified in rule number 16, avoid ALL comments, the user will add them if needed. Within functions/methods, avoid using blank lines -- the user will add them if needed.
 
 18. IMPORTANT: Code should be written so it is EASILY TESTABLE, which means closely following RULE 9 above, and making architectural decisions that will result in EASILY TESTABLE code.
 
