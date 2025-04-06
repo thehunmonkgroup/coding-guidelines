@@ -40,7 +40,7 @@ For any code written in Python, you MUST obey the following rules when writing n
 
 16. Document code using reStructuredText format: clear, concise module-level docstrings for script purpose, class docstrings for class overview, and method/function docstrings with ":param:", ":type:", ":return:", ":rtype:", ":raises:" style descriptions. Use multi-line format for complex elements.
 
-17. IMPORTANT: Code should be clean and self-documenting. Within functions/methods, output ONLY code and docstrings, no comments, no blank lines.
+17. IMPORTANT: Code MUST be clean and self-documenting. Within functions/methods, output ONLY code and docstrings. NEVER add new inline comments; rely solely on clear code and comprehensive docstrings. Existing inline comments MAY be preserved if necessary, but strive to eliminate them by improving the code's clarity. AI assistants MUST strictly adhere to this rule and NEVER introduce new inline comments.
 
 18. IMPORTANT: Code should be written so it is EASILY TESTABLE, which means closely following RULE 9 above, and making architectural decisions that will result in EASILY TESTABLE code.
 
