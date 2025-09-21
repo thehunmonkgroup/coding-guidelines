@@ -36,7 +36,7 @@ For any code written in Python, you MUST obey the following rules when writing n
 
 14. Employ the subprocess module for executing system commands when necessary.
 
-15. Adhere to PEP 8 guidelines for code style and formatting, with a minimum version of Python 3.10. DO NOT use any deprecated constructs -- this code will run on Python 3.10 and newer.
+15. Adhere to PEP 8 guidelines for code style and formatting, with a minimum version of Python 3.10. DO NOT use any deprecated constructs -- this code will run on Python 3.10 and newer. In particular, NEVER use deprecated typing declarations (such as Optional, Union, List, Dict, Tuple -- NEVER USE THESE!)
 
 16. Document code using reStructuredText format: clear, concise module-level docstrings for script purpose, class docstrings for class overview, and method/function docstrings with ":param:", ":type:", ":return:", ":rtype:", ":raises:" style descriptions. Use multi-line format for complex elements.
 
