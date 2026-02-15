@@ -13,6 +13,7 @@ For any code written in Python, you MUST obey the following rules when writing n
    * Order arguments logically: more important or required arguments first, followed by optional ones.
    * Group related arguments together.
    * Maintain the same order of arguments in the argparse definition and when passing them to methods/functions.
+   * If a default value is used, indicate this in the help string using the `%(default)s` syntax
 
 5. Utilize the logging module or a provided logging class or setup method for consistent and configurable logging output. Use detailed logging throughout the script:
    * Use appropriate log levels (DEBUG, INFO, WARNING, ERROR, CRITICAL) based on the importance of the log message.
