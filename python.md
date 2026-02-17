@@ -13,7 +13,7 @@ For any code written in Python, you MUST obey the following rules when writing n
    * Order arguments logically: more important or required arguments first, followed by optional ones.
    * Group related arguments together.
    * Maintain the same order of arguments in the argparse definition and when passing them to methods/functions.
-   * If a default value is used, indicate this in the help string using the `%(default)s` syntax
+   * If a default value is used and is a non-empty string, indicate this in the help string using the `%(default)s` syntax
 
 5. Utilize the logging module or a provided logging class or setup method for consistent and configurable logging output. Use detailed logging throughout the script:
    * Use appropriate log levels (DEBUG, INFO, WARNING, ERROR, CRITICAL) based on the importance of the log message.
@@ -37,12 +37,17 @@ For any code written in Python, you MUST obey the following rules when writing n
 
 14. Employ the subprocess module for executing system commands when necessary.
 
-15. Adhere to PEP 8 guidelines for code style and formatting, with a minimum version of Python 3.10. DO NOT use any deprecated constructs -- this code will run on Python 3.10 and newer. In particular, NEVER use deprecated typing declarations (such as Optional, Union, List, Dict, Tuple -- NEVER USE THESE!)
+15. Adhere to PEP 8 guidelines for code style and formatting, with a minimum version of Python 3.10. DO NOT use any deprecated constructs -- this code will run on Python 3.10 and newer. In particular:
+  - Use `from __future__ import annotations` at the top of every module for forward-reference support.
+  - Use `list`, `dict`, `tuple` lowercase generics (Python 3.10+).
+  - Use `X | None` instead of `Optional[X]`.
 
-16. Document code using reStructuredText format: clear, concise module-level docstrings for script purpose, class docstrings for class overview, and method/function docstrings with ":param:", ":type:", ":return:", ":rtype:", ":raises:" style descriptions. Use multi-line format for complex elements.
+16. Code structure and syntax MUST be written to pass both `basedpyright` and `flake8` checks.
 
-17. IMPORTANT: Code MUST be clean and self-documenting. Within functions/methods, output ONLY code and docstrings. NEVER add new inline comments; rely solely on clear code and comprehensive docstrings. Existing inline comments MAY be preserved if necessary, but strive to eliminate them by improving the code's clarity. AI assistants MUST strictly adhere to this rule and NEVER introduce new inline comments.
+17. Document code using reStructuredText format: clear, concise module-level docstrings for script purpose, class docstrings for class overview, and method/function docstrings with ":param:", ":type:", ":return:", ":rtype:", ":raises:" style descriptions. Use multi-line format for complex elements.
 
-18. IMPORTANT: Code should be written so it is EASILY TESTABLE, which means closely following RULE 9 above, and making architectural decisions that will result in EASILY TESTABLE code.
+18. IMPORTANT: Code MUST be clean and self-documenting. Within functions/methods, output ONLY code and docstrings. NEVER add new inline comments; rely solely on clear code and comprehensive docstrings. Existing inline comments MAY be preserved if necessary, but strive to eliminate them by improving the code's clarity. AI assistants MUST strictly adhere to this rule and NEVER introduce new inline comments.
 
-19. When writing tests, use the `pytest` testing library.
+19. IMPORTANT: Code should be written so it is EASILY TESTABLE, which means closely following RULE 9 above, and making architectural decisions that will result in EASILY TESTABLE code.
+
+20. When writing tests, use the `pytest` testing library.
