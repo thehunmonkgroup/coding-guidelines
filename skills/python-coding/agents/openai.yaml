@@ -1,0 +1,4 @@
+interface:
+  display_name: "Python Coding"
+  short_description: "Apply Python-specific coding rules and workflow"
+  default_prompt: "Use $python-coding to write or revise Python code that follows the project's Python rules."

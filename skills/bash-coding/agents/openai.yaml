@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bash Coding"
+  short_description: "Apply Bash-specific coding rules and workflow"
+  default_prompt: "Use $bash-coding to write or revise Bash code that follows the project's Bash rules."
