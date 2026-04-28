@@ -1,8 +1,8 @@
 # Coding Guidelines
 
-Reusable coding guidelines and Codex skills for Bash and Python.
+Reusable coding guidelines and Agent skills for Bash and Python.
 
-This repo keeps the human-edited rules in top-level markdown files and syncs installable Codex skills from `skills/` into your local Codex skills directory.
+This repo keeps the human-edited rules in top-level markdown files and syncs installable Agent skills from `skills/` into a local skills directory.
 
 ## Quickstart
 
@@ -17,16 +17,28 @@ This installs:
 - `bash-coding`
 - `python-coding`
 
-By default the skills are synced to:
+By default the skills are synced to the global user skills directory:
 
 ```bash
-${CODEX_HOME:-$HOME/.codex}/skills
+${HOME}/.agents/skills
 ```
 
-To install somewhere else:
+To install into `.agents/skills` in the current working directory:
 
 ```bash
-./scripts/install-skills.sh --target /path/to/skills
+/path/to/scripts/install-skills.sh --local
+```
+
+Short form:
+
+```bash
+/path/to/scripts/install-skills.sh -l
+```
+
+To install into a custom directory:
+
+```bash
+./scripts/install-skills.sh --target /path/to/.agents/skills
 ```
 
 ## Edit Flow
@@ -43,7 +55,7 @@ The installed skills read those files through symlinks in each skill's `referenc
 
 - `bash.md`: source-of-truth Bash guidance
 - `python.md`: source-of-truth Python guidance
-- `skills/`: Codex skill wrappers
+- `skills/`: Agent skill wrappers
 - `scripts/install-skills.sh`: sync installer
 - `comments.md`, `logging.md`, `testing-requirements.md`: supporting guidance drafts and reference material
 

@@ -5,20 +5,33 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 SOURCE_SKILLS_DIR="${REPO_ROOT}/skills"
-DEFAULT_TARGET="${CODEX_HOME:-${HOME}/.codex}/skills"
+DEFAULT_TARGET="${HOME}/.agents/skills"
 TARGET_DIR="${DEFAULT_TARGET}"
 
 usage() {
   cat <<'EOF'
-Usage: install-skills.sh [--target DIR]
+Usage: install-skills.sh [--local | --target DIR]
 
-Sync repo-managed skills into the Codex skills directory and refresh source-of-truth
+Sync repo-managed skills into an Agents skills directory and refresh source-of-truth
 reference symlinks back to bash.md and python.md.
+
+Defaults to the global user skills directory:
+  ${HOME}/.agents/skills
+
+For project-level installation in the current working directory:
+  install-skills.sh --local
+
+For project-level installation in another repo, target a repo-local skills directory:
+  .agents/skills
 EOF
 }
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
+    -l|--local)
+      TARGET_DIR="${PWD}/.agents/skills"
+      shift
+      ;;
     --target)
       if [[ $# -lt 2 ]]; then
         echo "Missing value for --target" >&2
